@@ -4,32 +4,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#061D3F",
-        secondary: {
-          DEFAULT: "#0166F6",
-          100: "#FF9001",
-          200: "#FF8E01",
-        },
-        black: {
-          DEFAULT: "#000",
-          100: "#1E1E2D",
-          200: "#232533",
-        },
-        gray: {
-          100: "#CDCDE0",
-        },
+        primary: "#001F2D",
+        secondary: "#4D626C",
+        white: "#FFF",
+        gray: "#74858C",
+        black: "#000",
       },
       fontFamily: {
-        cdextralight: ["CD-Extralight", "sans-serif"],
-        cdlight: ["CD-Light", "sans-serif"],
-        cdregular: ["CD-Regular", "sans-serif"],
-        cdmedium: ["CD-Medium", "sans-serif"],
-        cdsemibold: ["CD-Semibold", "sans-serif"],
-        cdbold: ["CD-Bold", "sans-serif"],
+        inlight: ["Inter-Light", "sans-serif"],
+        inregular: ["Inter-Regular", "sans-serif"],
+        inmedium: ["Inter-Medium", "sans-serif"],
+        insemibold: ["Inter-Semibold", "sans-serif"],
+        inbold: ["Inter-Bold", "sans-serif"],
       },
     },
   },
   plugins: [],
 };
-
-

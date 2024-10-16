@@ -8,12 +8,11 @@ SplashScreen.preventAutoHideAsync();
 
 const RootLayout = () => {
   const [fontsLoaded, error] = useFonts({
-    "CD-Bold": require("../assets/fonts/ClashDisplay-Bold.otf"),
-    "CD-Extralight": require("../assets/fonts/ClashDisplay-Extralight.otf"),
-    "CD-Light": require("../assets/fonts/ClashDisplay-Light.otf"),
-    "CD-Medium": require("../assets/fonts/ClashDisplay-Medium.otf"),
-    "CD-Regular": require("../assets/fonts/ClashDisplay-Regular.otf"),
-    "CD-Semibold": require("../assets/fonts/ClashDisplay-Semibold.otf"),
+    "Inter-Bold": require("../assets/fonts/Inter-Bold.ttf"),
+    "Inter-Light": require("../assets/fonts/Inter-Light.ttf"),
+    "Inter-Medium": require("../assets/fonts/Inter-Medium.ttf"),
+    "Inter-Regular": require("../assets/fonts/Inter-Regular.ttf"),
+    "Inter-Semibold": require("../assets/fonts/Inter-SemiBold.ttf"),
   });
 
   useEffect(() => {
@@ -36,9 +35,6 @@ const RootLayout = () => {
   return (
     <Stack>
       <Stack.Screen name="index" options={{ headerShown: false }} />
-      {/* <Stack.Screen name="search/[query]" options={{ headerShown: false }} /> */}
-      {/* <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> */}
-      {/* <Stack.Screen name="(auth)" options={{ headerShown: false }} /> */}
     </Stack>
   );
 };

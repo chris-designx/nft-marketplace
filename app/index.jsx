@@ -1,18 +1,44 @@
-import { StatusBar } from "expo-status-bar";
-import { View, Text, SafeAreaView, ScrollView } from "react-native";
+import React, { useState } from "react";
+import { View, SafeAreaView, FlatList } from "react-native";
 
-const Index = () => {
+import { NFTCard, HomeHeader } from "../components";
+import { NFTData } from "../constants";
+
+const Home = () => {
+  const [nftData, setNftData] = useState(NFTData);
+
+  const handleSearch = (value) => {
+    if (value.length === 0) {
+      setNftData(NFTData);
+    }
+
+    const filteredData = NFTData.filter((item) =>
+      item.name.toLowerCase().includes(value.toLowerCase())
+    );
+
+    setNftData(filteredData.length === 0 ? NFTData : filteredData);
+  };
+
   return (
     <SafeAreaView className="flex-1">
-      <ScrollView contentContainerStyle={{ flexGrow: 1, justifyContent: "center" }}>
-        <View className="w-full justify-center items-center px-5 bg-blue-600 min-h-full">
-          <Text className="text-primary text-2xl font-cdlight">Welcome to React Native App!</Text>
-          <Text className="font-cdbold">Start Coding!</Text>
+      <View className="flex-1 pt-7">
+        <View className="z-0">
+          <FlatList
+            data={nftData}
+            renderItem={({ item }) => <NFTCard data={item} />}
+            keyExtractor={(item) => item.id}
+            showsVerticalScrollIndicator={false}
+            ListHeaderComponent={<HomeHeader onSearch={handleSearch} />}
+          />
         </View>
-      </ScrollView>
-      <StatusBar backgroundColor="transparent" translucent={true} />
+
+        <View className="absolute top-0 bottom-0 right-0 left-0 z-[-1]">
+          <View className="h-[300px] bg-primary" />
+          <View className="flex-1 bg-white" />
+        </View>
+      </View>
     </SafeAreaView>
   );
 };
 
-export default Index;
+export default Home;
