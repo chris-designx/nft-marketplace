@@ -13,7 +13,7 @@
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/gigs-app.git
+    git clone https://github.com/chris-designx/nft-marketplace
     ```
 
 2. Navigate to the project directory:
