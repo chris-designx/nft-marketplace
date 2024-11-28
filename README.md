@@ -15,7 +15,7 @@
 
 2. Navigate to the project directory:
     ```bash
-    cd gigs-app
+    cd nft-marketplace
     ```
 
 3. Install dependencies:
