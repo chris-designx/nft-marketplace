@@ -6,8 +6,6 @@
 - [Components](#components)
 - [Running the App](#running-the-app)
 - [Technologies](#technologies)
-- [Folder Structure](#folder-structure)
-- [License](#license)
 
 ## Installation
 
