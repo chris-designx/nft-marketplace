@@ -5,7 +5,6 @@
 - [Screens](#screens)
 - [Components](#components)
 - [Running the App](#running-the-app)
-- [Technologies](#technologies)
 
 ## Installation
 
